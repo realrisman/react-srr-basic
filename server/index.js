@@ -15,7 +15,7 @@ app.use(express.static("./build"));
 app.get("/*", (req, res) => {
   const app = ReactDOMServer.renderToString(<App />);
 
-  const indexFile = path.resolve("./build/index.htmls");
+  const indexFile = path.resolve("./build/index.html");
   fs.readFile(indexFile, "utf8", (err, data) => {
     if (err) {
       console.error("Something went wrong: ", err);
